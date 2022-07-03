@@ -1,0 +1,60 @@
+.grid-container {
+  height: 770px;
+  width: 1300px;
+  border: 2px solid black;
+  border-style: solid;
+  display: grid;
+
+  /* grid-template-rows: 140px 140px 140px;   /* The grid-template-rows CSS property defines the line names and track sizing functions of the grid rows. */
+  /* grid-template-columns: 140px 140px 140px; /* The grid-template-columns CSS property defines the line names and track sizing functions of the grid columns. */
+
+  /* grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); */
+
+  grid-template-rows: 1fr 1fr 1fr;   /* you can even select any on these to pixels to determine the width of any row */
+  grid-template-columns: 1fr 1fr 1fr;
+
+    row-gap: 12px;            /* The row-gap CSS property sets the size of the gap (gutter) between an element's rows. */
+    column-gap: 12px;         /* The column-gap CSS property sets the size of the gap (gutter) between an element's columns. */
+
+    /* grid-auto-flow: row dense; */      /* The grid-auto-flow CSS property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid. */
+
+
+                            /* justify items */ 
+
+    /* justify-items: center; */              /* Align all items in center of grid layout */
+    /* justify-items: flex-start; */          /* Align all items at start of grid layout */
+    /* justify-items: flex-end; */            /* Align all items at end of grid layout */
+                    
+                             /* align-items */
+    /* align-items: center; */                /* All items will get aligned verticallly centered */
+
+    /* place-items: center; */              /* align-items = center + justify-items = center */
+  
+}
+
+.item {
+  /* height: 122px;
+  width: 122px; */
+  border: 2px solid black;
+  margin: 10px;
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  /* align-self: center; */                /* vertically centered a specific item */
+  /* place-self: center; */                /* align-items = center + justify-items = center */
+}
+
+.item2 {
+                                /* justify-self */
+  /* justify-self: center; */           /* Specific item will get aligned to center */
+  /* justify-self: flex-start; */
+  /* justify-self: flex-end; */
+}
+.item7 {
+  /* grid-column-start: 2;
+  grid-column-end: 4; */
+  grid-column: 2 / span 2;    /* 2 -> column number then span 2 means it has to be expanded 2 columns */
+}
